@@ -27,11 +27,11 @@ El código calcula la letra correspondiente a un número de DNI y la compara con
 
 ## Funcionalidades
 
-- **```comprobarDNI```:** Verifica si el DNI y la letra coinciden correctamente.
+- ```comprobarDNI```: Verifica si el DNI y la letra coinciden correctamente.
 <br>
-- **```calcularLetraDNI```:** Calcula la letra correspondiente a un número de DNI.
+- ```calcularLetraDNI```:Calcula la letra correspondiente a un número de DNI.
 <br>
-- **```ComprobarLongitudDNI```:** Comprueba que el DNI tenga 8 caracteres.
+- ```ComprobarLongitudDNI```:Comprueba que el DNI tenga 8 caracteres.
 ## Tests
 
 Se han creado pruebas unitarias para los métodos de la clase `Main` usando JUnit. Los tests son parametrizados y cubren los siguientes casos:
