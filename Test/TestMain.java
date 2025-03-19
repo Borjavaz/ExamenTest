@@ -35,5 +35,18 @@ public class TestMain {
         char letraCalculada = Main.calcularLetraDNI(dni);
         assertEquals(letraEsperada, letraCalculada);
     }
+
+    // Test para comprobar que el DNI tenga 8 caracteres (caso de error)
+    @DisplayName("Comprobar que el DNI tenga exactamente 8 caracteres")
+    @ParameterizedTest
+    @CsvSource({
+            "1234567, false", // DNI corto
+            "123456789, false" // DNI largo
+    })
+
+    public void testComprobarLongitudDNI(String dni, boolean esperado) {
+        boolean resultado = dni.length() == 8;
+        assertEquals(esperado, resultado);
+    }
 }
 
