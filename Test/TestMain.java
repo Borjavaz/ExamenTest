@@ -20,5 +20,20 @@ public class TestMain {
         boolean resultado = Main.comprobarDNI(dni, letra);
         assertEquals(esperado, resultado);
     }
+    // Test para comprobar la letra calculada del DNI
+    @DisplayName("Comprobar la letra calculada del DNI")
+    @ParameterizedTest
+    @CsvSource({
+            "00000000, T", // Ejemplo correcto
+            "12345678, Z", // Ejemplo correcto
+            "98765432, M", // Ejemplo correcto
+            "17463292, J", // Ejemplo correcto
+
+    })
+
+    public void testCalcularLetraDNI(String dni, char letraEsperada) {
+        char letraCalculada = Main.calcularLetraDNI(dni);
+        assertEquals(letraEsperada, letraCalculada);
+    }
 }
 
